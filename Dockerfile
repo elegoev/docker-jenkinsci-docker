@@ -2,8 +2,8 @@ FROM jenkins/jenkins
 MAINTAINER Urs Voegele
 
 User root
-RUN apt-get update -y \
-   && apt-get install -y jq
+RUN apt-get update -y -qq \
+    && apt-get install -qqy jq apt-transport-https ca-certificates curl lxc iptables
 USER jenkins
 
 # Skip initial setup.
@@ -34,6 +34,7 @@ ENV HELM_FILENAME=helm-${HELM_VERSION}-linux-amd64.tar.gz
 RUN curl -s -L https://storage.googleapis.com/kubernetes-helm/${HELM_FILENAME} | tar xz \
    && mv linux-amd64/helm /bin/helm \
    && rm -rf linux-amd64 \
+   && helm init --client-only \
    && curl -s -fL https://getcli.jfrog.io | sh \
    && chmod +x jfrog \
    && mv jfrog /bin/jfrog
