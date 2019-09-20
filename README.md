@@ -19,6 +19,8 @@ Used base image [jenkins/jenkins](https://hub.docker.com/r/jenkins/jenkins)
 - [Developing Groovy Scripts to Automate Jenkins](https://brokenco.de/2017/07/24/groovy-automation-for-jenkins.html)
 - [Jenkins updating init.groovy.d files in a docker container](https://stackoverflow.com/questions/45818327/jenkins-updating-init-groovy-d-files-in-a-docker-container)
 - [JFrog Client](https://www.jfrog.com/confluence/display/CLI/CLI+for+JFrog+Artifactory)
+- [Docker-in-Docker](https://github.com/jpetazzo/dind)
+- [Official Docker Image](https://hub.docker.com/_/docker)
 
 
 ### Ports & Access
